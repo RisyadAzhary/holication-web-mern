@@ -56,35 +56,35 @@
 }
 
 header {
-  border-bottom: 1px solid $gray-200;
-  width: 100%;
-  position: relative;
-  margin-bottom: 50px;
+	border-bottom: 1px solid $gray-200;
+	width: 100%;
+	position: relative;
+	margin-bottom: 50px;
+	margin-bottom: 70px;
 
-  .navbar {
-    height: 80px;
+	.navbar {
+		height: 80px;
 
-    ul.navbar-nav {
-      
-      li.nav-item {
+		ul.navbar-nav {
+			li.nav-item {
 				font-family: "Comfortaa", cursive;
-        &.active {
-          a.nav-link {
-            color: $primary;
-          }
-        }
-        a {
-          &.nav-link {
-            letter-spacing: 1px;
-            color: $secondary;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            &:hover {
-              text-decoration: underline;
-            }
-          }
-        }
-      }
-    }
-  }
+				&.active {
+					a.nav-link {
+						color: $primary;
+					}
+				}
+				a {
+					&.nav-link {
+						letter-spacing: 1px;
+						color: $secondary;
+						padding-left: 1rem;
+						padding-right: 1rem;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
 }

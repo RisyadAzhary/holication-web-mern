@@ -4,8 +4,8 @@ import propTypes from "prop-types";
 
 export default function Button(props) {
 	const className = [props.className];
-
 	if (props.isPrimary) className.push("btn-primary");
+	if (props.isLight) className.push("btn-light");
 	if (props.isLarge) className.push("btn-lg");
 	if (props.isSmall) className.push("btn-sm");
 	if (props.isBlock) className.push("btn-block");
@@ -20,10 +20,10 @@ export default function Button(props) {
 		return (
 			<span className={className.join("")} style={props.style}>
 				{props.isLoading ? (
-					<React.Fragment>
-						<span className='spinner-border.spinner-border-sm.mx-5'></span>
+					<>
+						<span className='spinner-border spinner-border-sm mx-5'></span>
 						<span className='sr-only'>loading...</span>
-					</React.Fragment>
+					</>
 				) : (
 					props.children
 				)}
@@ -60,7 +60,7 @@ export default function Button(props) {
 
 	return (
 		<button
-			className={className.join("")}
+			className={className.join(" ")}
 			style={props.style}
 			onClick={onClick}
 		>
@@ -72,16 +72,18 @@ export default function Button(props) {
 Button.propTypes = {
 	//hanya terima properti button / link
 	type: propTypes.oneOf(["button", "link"]),
+	onClick: propTypes.func,
 	//classnamenya
 	className: propTypes.string,
 	// pastikan button sbuah function
-	onClick: propTypes.func,
 	href: propTypes.string,
 	//untk link eksternal
 	target: propTypes.string,
 	//button disabled
 	isDisabled: propTypes.bool,
+	isLight: propTypes.bool,
 	isExternal: propTypes.bool,
+	isPrimary: propTypes.bool,
 	//menambah animasi loading
 	isLoading: propTypes.bool,
 	//ukuran

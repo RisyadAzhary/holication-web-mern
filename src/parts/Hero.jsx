@@ -23,7 +23,6 @@ export default function Hero(props) {
 				<div className='col-auto pr-5' style={{ width: 530 }}>
 					<h1
 						className=' font-weight-bold line-height-1 mb-3 text-secondary'
-						sty
 					>
 						Forget Busy Work, <br />
 						Start Next Vacation

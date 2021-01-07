@@ -5,7 +5,8 @@
 //
 
 .btn {
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
 	font-family: $btn-font-family;
 	font-weight: $btn-font-weight;
 	color: $body-color;
@@ -15,8 +16,8 @@
 	vertical-align: middle;
 	user-select: none;
 	background-color: transparent;
-  border: $btn-border-width solid transparent;
-  min-height: 50px;
+	border: $btn-border-width solid transparent;
+	min-height: 50px;
 	@include button-size(
 		$btn-padding-y,
 		$btn-padding-x,
